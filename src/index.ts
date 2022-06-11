@@ -1,10 +1,10 @@
-const { app, BrowserWindow } = require('electron');
-const path = require('path');
-const fs = require('fs');
+const {app, BrowserWindow} = require('electron') 
+const path = require('path')
+const fs = require('fs')
+const shell = require('shell')
 // conf
 const port = 65414;
 //
-
 
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -24,6 +24,8 @@ const createWindow = () => {
   // and load the index.html of the app.
   mainWindow.loadURL('http://localhost:'+port);
   mainWindow.focus();
+// disable menuBar
+  mainWindow.setMenu(null);
 
   // Open the DevTools.
  // mainWindow.webContents.openDevTools(); -- No need for that right now
@@ -51,13 +53,8 @@ app.on('activate', () => {
   }
 });
 
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and import them here.
-
 
 // Express Server Running the entire core
-
-
 const bodyParser = require("body-parser");
 const express = require('express'); 
 const backend = express();
@@ -68,61 +65,39 @@ backend.use(bodyParser.urlencoded({extended: true}));
 backend.set('views', __dirname + '/views/');
 backend.use(express.static(__dirname + '/views/'));
 
+
+if (!fs.existsSync('./fivet_config')) {
+  fs.writeFileSync('./fivet_config', 'Not set');
+}
+let fivet_config = fs.readFileSync('./fivet_config', 'utf8');
+
 // Frontend Routes
 backend.get('/', (req, res) => {
-res.render('index')
+  let fivet_config = fs.readFileSync('./fivet_config', 'utf8');
+  res.render('index', {fivet_config: fivet_config});
 });
 
 backend.get('/settings', (req, res) => {
   res.render('settings')
   });
 
-// backend.get('/cachedel', (req, res) => {
-//   res.render('cache-deleter')
-//   });
-
-  const alert = require("alert");
-
-  // Backend
-
-  backend.post('/savesettings', (req, res) => {
-    // create a file named fivet_config and write the data in there
-    const fs = require('fs');
-    const path = require('path');
-    const filePath = path.join(__dirname, 'fivet_config');
-    const data = req.body.fivemlocation;
-    fs.writeFile(filePath, data, err => {
-      if (err) {
-        console.log("Error while saving file", err);
-      }
-    });
-    res.redirect('/');
-    res.send(alert("Settings Saved"));
-    
-    
-  }
-
-    );
-
-  backend.get('/test', (req, res) => {
-  // read "fivet_config" file and send it to the frontend
-  const fs = require('fs');
-  const path = require('path');
-  const __filePath = path.join(__dirname, 'fivet_config');
-  fs.readFile(__filePath, 'utf8', (err, data) => {
-    if (err) {
-      console.log("Error while reading file", err);
-    }
-    res.send(data);
-  })
+  backend.get('/success', (req, res) => {
+  res.render('success')
   });
 
+ 
+  // Backend
+  backend.post('/savesettings', (req, res) => {
+    const data = req.body.fivemlocation;
+    const data2 = data.replace(/\\/g, "/");
+    fs.writeFileSync('fivet_config', data2);
+    res.redirect('/success');
+  }
+    );
 
   backend.get('/cachedel', (req, res) => {
-    // navigate to the location specidfied in file "fivet_config", go to "FiveM Application Data" then go to "/data" and delete folder with names: "cache" and "server-cache"
-    // read fivet_config and if it's missing or empty then redirect to settings page
-    const _filePath = path.join(__dirname, 'fivet_config');
-    fs.readFile(_filePath, 'utf8', (err, data) => {
+    const configfile = fs.readFileSync('./fivet_config', 'utf8');
+    fs.readFile(configfile, 'utf8', (err, data) => {
     if (err) {
       console.log("Error while reading file", err);
     }
@@ -130,24 +105,7 @@ backend.get('/settings', (req, res) => {
       res.redirect("/settings");
     }
   })
-    
-    
-    
-    const filePath = path.join(__dirname, 'fivet_config');
-    fs.readFile(filePath, 'utf8', (err, data) => {
-      if (err) {
-        console.log("Error while reading file", err);
-      }
-      const fivemlocation = data;
-      // const exec = require('child_process').exec;
-      // const cmd = `cd ${fivemlocation} && cd data && rm -rf cache && rm -rf server-cache`;
-      // exec(cmd, (err, stdout, stderr) => {
-      //   if (err) {
-      //     console.log("error")
-      //   }
-      //   res.send("Cache Deleted");
-      // });
-      
+   let fivemlocation = configfile      
       const dir = fivemlocation + "/FiveM.app/data/cache"
       const dir2 = fivemlocation + "/FiveM.app/data/server-cache"
       const dir3 = fivemlocation + "/FiveM.app/data/server-cache-priv"
@@ -180,11 +138,7 @@ backend.get('/settings', (req, res) => {
       res.render("cache-deleter")
     })
 
-    
-
-
-
-});
+  
 
 
 

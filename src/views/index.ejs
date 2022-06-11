@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>FiveToolbox</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.1.3/dist/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&amp;display=swap">
     <link rel="stylesheet" href="/assets/css/most-popular.css">
     <link rel="stylesheet" href="/assets/css/Navbar-Centered-Brand.css">
@@ -14,12 +15,15 @@
 
 <body style="background: rgb(20,20,20);font-family: Poppins, sans-serif;">
     <nav class="navbar navbar-light navbar-expand-md py-3" style="background: rgb(20,20,20);">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#" style="color: rgba(255,255,255,0.9);"><span>FiveToolbox Alpha</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-4"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="#" style="color: rgba(255,255,255,0.9);"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor">
+                        <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                        <path d="M502.6 182.6l-45.25-45.25C451.4 131.4 443.3 128 434.8 128H384V80C384 53.5 362.5 32 336 32h-160C149.5 32 128 53.5 128 80V128H77.25c-8.5 0-16.62 3.375-22.62 9.375L9.375 182.6C3.375 188.6 0 196.8 0 205.3V304h128v-32C128 263.1 135.1 256 144 256h32C184.9 256 192 263.1 192 272v32h128v-32C320 263.1 327.1 256 336 256h32C376.9 256 384 263.1 384 272v32h128V205.3C512 196.8 508.6 188.6 502.6 182.6zM336 128h-160V80h160V128zM384 368c0 8.875-7.125 16-16 16h-32c-8.875 0-16-7.125-16-16v-32H192v32C192 376.9 184.9 384 176 384h-32C135.1 384 128 376.9 128 368v-32H0V448c0 17.62 14.38 32 32 32h448c17.62 0 32-14.38 32-32v-112h-128V368z"></path>
+                    </svg>&nbsp;FiveToolbox by P33t.net</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-4"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse flex-grow-0 order-md-first" id="navcol-4">
                 <ul class="navbar-nav me-auto"></ul>
-                <div class="d-md-none my-2"><button class="btn btn-light me-2" type="button">Button</button><button class="btn btn-primary" type="button">Button</button></div>
+    
             </div>
-            <div class="d-none d-md-block"><a class="btn btn-primary" role="button" href="/settings" style="background: rgb(40,40,40);">Settings</a></div>
+            <div class="d-none d-md-block"><a class="btn btn-primary" role="button" href="/settings" style="background: rgb(40,40,40);border-color: rgba(0,0,0,0);">Settings</a></div>
         </div>
     </nav>
     <div style="height: auto;background: linear-gradient(-96deg, #3eadcf 0%, #abe9cd 100%), #ffffff;border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;border-bottom-left-radius: 5px;">
@@ -33,7 +37,7 @@
                     <div class="card-body">
                         <h4 class="card-title" style="text-align: center;color: rgb(255,255,255);">Cache deleter</h4>
                         <h6 class="card-title" style="text-align: center;color: rgb(119,119,119);">Configuration required</h6>
-                        <div class="text-center"><a class="btn btn-primary" role="button" href="/cachedel" style="width: 100%;background: rgb(50,50,50);border-color: rgb(50,50,50);">Start</a></div>
+                        <div class="text-center"><a class="btn btn-primary" role="button" style="width: 100%;background: rgb(50,50,50);border-color: rgb(50,50,50);" href="/cachedel">Start</a></div>
                     </div>
                 </div>
             </div>
@@ -52,12 +56,28 @@
                     <div class="card-body">
                         <h4 class="card-title" style="text-align: center;color: rgb(255,255,255);">Coming soon</h4>
                         <h6 class="card-title" style="text-align: center;color: rgb(119,119,119);">Idk what should i put there</h6>
-                        <div class="text-center"><a class="btn btn-primary disabled" role="button" href="#" style="width: 100%;background: rgb(50,50,50);border-color: rgb(50,50,50);">Start</a></div>
+                        <div class="text-center"><a class="btn btn-primary disabled" role="button" style="width: 100%;background: rgb(50,50,50);border-color: rgb(50,50,50);">Start</a></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
+    <nav class="navbar navbar-light navbar-expand fixed-bottom py-3" style="background: rgb(20,20,20);">
+        <div class="container"><a class="btn btn-primary disabled" role="button" href="#" style="background: rgb(40,40,40);border-color: rgba(0,0,0,0);margin-right: 10px;margin-left: 10px;width: 10%;height: 63px;" disabled>Version: 1.0.0</a><a class="btn btn-primary disabled" role="button" href="#" style="background: rgb(40,40,40);border-color: rgba(0,0,0,0);margin-right: 10px;margin-left: 10px;width: 90%;height: 63px;font-size: 23px;" disabled>Your fivem location: <%= fivet_config %></a></div>
+    </nav>
+
+
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+         <script>
+
+            // const swal = require("sweetalert")
+            // swal("Welcome!");
+
+         </script>
+
+
+    </nav>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

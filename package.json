@@ -3,55 +3,40 @@
   "productName": "fivetoolbox",
   "description": "Toolbox software for fivem",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "src/index.ts",
   "scripts": {
-    "start": "electron-forge start",
+    "start": "tsc && electron-forge start",
     "package": "electron-forge package",
-    "make": "electron-forge make",
-    "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "make": "electron-builder",
+    "lint": "eslint --ext .ts ."
   },
   "keywords": [],
   "author": {
-    "name": "Peter",
-    "email": "p33tcz@gmail.com"
+    "name": "P33t",
+    "email": "p33t@p33t.net"
   },
   "license": "MIT",
-  "config": {
-    "forge": {
-      "packagerConfig": {},
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "fivetoolbox",
-            "icon": "icon.ico"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
-        }
-      ]
+  "build": {
+    "appId": "net.p33t.fivetoolbox",
+    "productName": "FiveToolbox",
+    "target": "nsis",
+    "icon": "ico.ico",
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "ico.ico",
+      "uninstallerIcon": "ico.ico"
     }
   },
   "dependencies": {
-    "alert": "^5.0.11",
     "body-parser": "^1.20.0",
     "ejs": "^3.1.8",
     "electron-squirrel-startup": "^1.0.0",
+    "eslint": "^8.17.0",
     "express": "^4.18.1",
-    "sweetalert": "^2.1.2"
+    "shell": "^0.9.4",
+    "sweetalert": "^2.1.2",
+    "typescript": "^4.7.3"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.59",
@@ -59,6 +44,9 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.59",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.59",
     "@electron-forge/maker-zip": "^6.0.0-beta.59",
-    "electron": "19.0.3"
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "electron": "19.0.3",
+    "electron-builder": "^23.0.3",
+    "eslint-plugin-import": "^2.26.0"
   }
 }
