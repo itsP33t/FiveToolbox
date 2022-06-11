@@ -1,10 +1,17 @@
 const {app, BrowserWindow} = require('electron') 
 const path = require('path')
 const fs = require('fs')
-const shell = require('shell')
 // conf
 const port = 65414;
 //
+
+
+// auto updating
+const { autoUpdater } = require("electron-updater")
+autoUpdater.checkForUpdatesAndNotify()
+//
+
+
 
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
