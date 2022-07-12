@@ -7,9 +7,7 @@ const express = require("express");
 const port = 65414;
 const version = "1.0.3";
 //
-// auto updating
-const { autoUpdater } = require("electron-updater");
-//
+
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require("electron-squirrel-startup")) {
   // eslint-disable-line global-require
