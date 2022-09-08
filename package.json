@@ -11,8 +11,7 @@
   "scripts": {
     "start": "tsc && electron-forge start",
     "package": "electron-forge package",
-    "make": "ts",
-    "makelocally": "electron-builder",
+    "make": "electron-builder",
     "lint": "eslint --ext .ts .",
     "publish": "electron-builder -p always"
   },
