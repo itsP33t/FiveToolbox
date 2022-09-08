@@ -2,7 +2,7 @@
   "name": "fivetoolbox",
   "productName": "fivetoolbox",
   "description": "Toolbox software for fivem",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "src/index.ts",
   "repository": {
     "type": "git",
@@ -11,7 +11,8 @@
   "scripts": {
     "start": "tsc && electron-forge start",
     "package": "electron-forge package",
-    "make": "electron-builder",
+    "make": "ts",
+    "makelocally": "electron-builder",
     "lint": "eslint --ext .ts .",
     "publish": "electron-builder -p always"
   },
@@ -42,6 +43,7 @@
     "body-parser": "^1.20.0",
     "ejs": "^3.1.8",
     "electron-squirrel-startup": "^1.0.0",
+    "electron-store": "^8.1.0",
     "electron-updater": "^5.0.1",
     "eslint": "^8.17.0",
     "express": "^4.18.1",

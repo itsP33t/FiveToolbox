@@ -3,9 +3,10 @@ const { app, BrowserWindow } = require("electron");
 const fs = require("fs");
 const bodyParser = require("body-parser");
 const express = require("express");
+const Store = require('electron-store');
 // conf
 const port = 65414;
-const version = "1.0.3";
+const version = "1.0.4";
 //
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -55,18 +56,21 @@ backend.use(bodyParser.urlencoded({ extended: true }));
 backend.set("views", __dirname + "/views/");
 backend.use(express.static(__dirname + "/views/"));
 
-if (!fs.existsSync("/fivet_config")) {
-  fs.writeFileSync("./fivet_config", "Not set");
+const loc = new Store();
+
+
+// if loc is empty, set it to Not Set
+if (loc.get("location") == undefined) {
+  loc.set("location", "Not Set");
 }
 
 // Dir config
-const configfile = fs.readFileSync("./fivet_config", "utf8");
+const configfile = loc.get("location")
 //
 
 // Frontend Routes
 backend.get("/", (req, res) => {
-  const fivet_config = fs.readFileSync("./fivet_config", "utf8");
-  res.render("index", { fivet_config: fivet_config, version: version });
+  res.render("index", { fivet_config: loc.get("location"), version: version });
 });
 
 backend.get("/settings", (req, res) => {
@@ -77,8 +81,8 @@ backend.get("/settings", (req, res) => {
 backend.post("/savesettings", (req, res) => {
   const data = req.body.fivemlocation;
   const data2 = data.replace(/\\/g, "/");
-  fs.writeFileSync("fivet_config", data2);
-  res.redirect("/success");
+  loc.set("location", data2);
+  res.render("success");
 });
 
 backend.get("/cachedel", (req, res) => {

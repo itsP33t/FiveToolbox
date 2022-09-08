@@ -21,7 +21,7 @@ it's using only 60mb of ram
 ##### You can get it on the [github releases](https://github.com/itsP33t/FiveToolbox/releases/latest "github releases")
 
 ### Under the hood (for developers)
-##### FiveToolbox is running on electron.js, the main core is running on the express server locally. The app creates file named `fivet_config` where it saves the fivem location
+##### FiveToolbox is running on electron.js, the main core is running on the express server locally
 
 ### Report bugs
 ##### You can use the issues tab to report bugs
