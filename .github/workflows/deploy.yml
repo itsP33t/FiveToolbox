@@ -9,6 +9,7 @@ jobs:
     - uses: actions/setup-node@master
       with:
         node-version: 16
+        GH_TOKEN: ${{ secrets.token }}
     - name: install dependencies
       run: npm install
     - name: build
@@ -21,6 +22,7 @@ jobs:
     - uses: actions/setup-node@master
       with:
         node-version: 16
+        GH_TOKEN: ${{ secrets.token }}
     - name: install dependencies
       run: npm install
     - name: build
@@ -33,9 +35,8 @@ jobs:
     - uses: actions/setup-node@master
       with:
         node-version: 16
+        GH_TOKEN: ${{ secrets.token }}
     - name: install dependencies
       run: npm install
     - name: build
       run: npm run make
-
-      GH_TOKEN: ${{ secrets.token }}
