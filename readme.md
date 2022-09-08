@@ -18,7 +18,7 @@ Everything is fast and easy to navigate
 it's using only 60mb of ram
 
 ### Download
-##### You can get it on the [github releases](https://github.com/itsP33t/FiveToolbox/releases/tag/Releases "github releases")
+##### You can get it on the [github releases](https://github.com/itsP33t/FiveToolbox/releases/latest "github releases")
 
 ### Under the hood (for developers)
 ##### FiveToolbox is running on electron.js, the main core is running on the express server locally. The app creates file named `fivet_config` where it saves the fivem location
