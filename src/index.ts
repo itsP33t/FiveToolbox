@@ -3,10 +3,10 @@ const { app, BrowserWindow } = require("electron");
 const fs = require("fs");
 const bodyParser = require("body-parser");
 const express = require("express");
-const Store = require('electron-store');
+const Store = require("electron-store");
 // conf
 const port = 65414;
-const version = "1.0.4";
+const version = "1.0.5";
 //
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -58,14 +58,13 @@ backend.use(express.static(__dirname + "/views/"));
 
 const loc = new Store();
 
-
 // if loc is empty, set it to Not Set
 if (loc.get("location") == undefined) {
   loc.set("location", "Not Set");
 }
 
 // Dir config
-const configfile = loc.get("location")
+const configfile = loc.get("location");
 //
 
 // Frontend Routes
@@ -86,15 +85,7 @@ backend.post("/savesettings", (req, res) => {
 });
 
 backend.get("/cachedel", (req, res) => {
-  const configfile = fs.readFileSync("./fivet_config", "utf8");
-  fs.readFile(configfile, "utf8", (err, data) => {
-    if (err) {
-      console.log("Error while reading file", err);
-    }
-    if (data == "") {
-      res.redirect("/settings");
-    }
-  });
+  const configfile = loc.get("location");
   const fivemlocation = configfile;
   const dir = fivemlocation + "/FiveM.app/data/cache";
   const dir2 = fivemlocation + "/FiveM.app/data/server-cache";
