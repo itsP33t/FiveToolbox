@@ -45,7 +45,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h3 class="text-dark mb-0" style="color: rgb(255,255,255)!important;">Settings</h3>
+                            <h3 class="text-dark mb-0" style="color: rgb(255,255,255)!important;">Clean</h3>
                         </div>
                     </div>
                 </div>
@@ -55,20 +55,37 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h4 style="color: rgb(255,255,255);margin-top: 9px;">You can set your FiveM location and many other stuff here!</h4>
+                            <h4 style="color: rgb(255,255,255);margin-top: 9px;">You can clear you cache, logs and crashes. I recommend to wait a few seconds after the clean completes to make sure it's deleted</h4>
+                            <h3 style="color: rgb(255,255,255);margin-top: 31px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-96 0 512 512" width="1em" height="1em" fill="currentColor">
+                                    <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                                    <path d="M204.3 32.01H96c-52.94 0-96 43.06-96 96c0 17.67 14.31 31.1 32 31.1s32-14.32 32-31.1c0-17.64 14.34-32 32-32h108.3C232.8 96.01 256 119.2 256 147.8c0 19.72-10.97 37.47-30.5 47.33L127.8 252.4C117.1 258.2 112 268.7 112 280v40c0 17.67 14.31 31.99 32 31.99s32-14.32 32-31.99V298.3L256 251.3c39.47-19.75 64-59.42 64-103.5C320 83.95 268.1 32.01 204.3 32.01zM144 400c-22.09 0-40 17.91-40 40s17.91 39.1 40 39.1s40-17.9 40-39.1S166.1 400 144 400z"></path>
+                                </svg>&nbsp;What do you want to clean?</h3>
                         </div>
                     </div>
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12" style="margin-top: 21px;">
-                            <div class="card" style="background: rgb(40,40,40);border-color: rgb(40,40,40);">
+                        <div class="col-md-4">
+                            <div class="card" style="background: rgb(40,40,40);border-color: rgb(40,40,40);border-radius: 11px;">
+                                <div class="card-body" style="height: 225px;">
+                                    <h4 class="card-title" style="color: rgb(255,255,255);">Clear Cache</h4>
+                                    <p class="card-text" style="color: rgb(255,255,255);">Clears all cache. You should do it at least once a month if you are active FiveM player<br><br></p><a class="btn btn-primary" role="button" style="background: rgb(30,30,30);border-color: rgb(30,30,30);width: 100%;" href="/cachedel">Start</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card" style="background: rgb(40,40,40);border-color: rgb(40,40,40);border-radius: 11px;height: 225px;">
                                 <div class="card-body">
-                                    <h3 class="text-dark mb-0" style="color: rgb(255,255,255)!important;">FiveM location&nbsp;<span class="badge bg-primary" style="background: #0072C6!important;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor">
-                                                <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
-                                                <path d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 400c-18 0-32-14-32-32s13.1-32 32-32c17.1 0 32 14 32 32S273.1 400 256 400zM325.1 258L280 286V288c0 13-11 24-24 24S232 301 232 288V272c0-8 4-16 12-21l57-34C308 213 312 206 312 198C312 186 301.1 176 289.1 176h-51.1C225.1 176 216 186 216 198c0 13-11 24-24 24s-24-11-24-24C168 159 199 128 237.1 128h51.1C329 128 360 159 360 198C360 222 347 245 325.1 258z"></path>
-                                            </svg><span style="font-weight: normal !important;">&nbsp;Location of your FiveM application data</span></span></h3>
-                                    <form action="/savesettings" method="post"><input class="form-control" type="text" style="margin-top: 23px;background: rgb(50,50,50);border-color: rgb(50,50,50);margin-bottom: 14px;" name="fivemlocation" placeholder="Your FiveM location. Make sure there's Fivem and FiveM Application data in the folder"><button class="btn btn-success btn-icon-split" type="submit"><span class="text-white-50 icon"><i class="fas fa-check"></i></span><span class="text-white text">Save Settings</span></button></form>
+                                    <h4 class="card-title" style="color: rgb(255,255,255);">Clear Logs</h4>
+                                    <p class="card-text" style="color: rgb(255,255,255);">Clears all logs. It's useless to have them if you don't have problems with FiveM and want to find why it happens</p><a class="btn btn-primary" role="button" style="background: rgb(30,30,30);border-color: rgb(30,30,30);width: 100%;" href="/logsdel">Start</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card" style="background: rgb(40,40,40);border-color: rgb(40,40,40);border-radius: 11px;">
+                                <div class="card-body" style="height: 225px;">
+                                    <h4 class="card-title" style="color: rgb(255,255,255);">Clear Crashes</h4>
+                                    <p class="card-text" style="color: rgb(255,255,255);">Clears all crashes. It's useless to have it stored if you don't have problems with FiveM and want to debug it</p><a class="btn btn-primary" role="button" style="background: rgb(30,30,30);border-color: rgb(30,30,30);width: 100%;" href="/crashesdel">Start</a>
                                 </div>
                             </div>
                         </div>

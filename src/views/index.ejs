@@ -1,73 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>FiveToolbox</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.1.3/dist/flatly/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&amp;display=swap">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&amp;display=swap">
-    <link rel="stylesheet" href="/assets/css/most-popular.css">
-    <link rel="stylesheet" href="/assets/css/Navbar-Centered-Brand.css">
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
-<body style="background: rgb(20,20,20);font-family: Poppins, sans-serif;">
-    <nav class="navbar navbar-light navbar-expand-md py-3" style="background: rgb(20,20,20);">
-        <div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="#" style="color: rgba(255,255,255,0.9);"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor">
-                        <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
-                        <path d="M502.6 182.6l-45.25-45.25C451.4 131.4 443.3 128 434.8 128H384V80C384 53.5 362.5 32 336 32h-160C149.5 32 128 53.5 128 80V128H77.25c-8.5 0-16.62 3.375-22.62 9.375L9.375 182.6C3.375 188.6 0 196.8 0 205.3V304h128v-32C128 263.1 135.1 256 144 256h32C184.9 256 192 263.1 192 272v32h128v-32C320 263.1 327.1 256 336 256h32C376.9 256 384 263.1 384 272v32h128V205.3C512 196.8 508.6 188.6 502.6 182.6zM336 128h-160V80h160V128zM384 368c0 8.875-7.125 16-16 16h-32c-8.875 0-16-7.125-16-16v-32H192v32C192 376.9 184.9 384 176 384h-32C135.1 384 128 376.9 128 368v-32H0V448c0 17.62 14.38 32 32 32h448c17.62 0 32-14.38 32-32v-112h-128V368z"></path>
-                    </svg>&nbsp;FiveToolbox by P33t.net</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-4"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse flex-grow-0 order-md-first" id="navcol-4">
-                <ul class="navbar-nav me-auto"></ul>
-    
+<body id="page-top" style="font-family: Poppins, sans-serif;">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style="background: #0072c6;">
+            <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="/">
+                    <div class="sidebar-brand-icon rotate-n-15"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor">
+                            <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                            <path d="M502.6 182.6l-45.25-45.25C451.4 131.4 443.3 128 434.8 128H384V80C384 53.5 362.5 32 336 32h-160C149.5 32 128 53.5 128 80V128H77.25c-8.5 0-16.62 3.375-22.62 9.375L9.375 182.6C3.375 188.6 0 196.8 0 205.3V304h128v-32C128 263.1 135.1 256 144 256h32C184.9 256 192 263.1 192 272v32h128v-32C320 263.1 327.1 256 336 256h32C376.9 256 384 263.1 384 272v32h128V205.3C512 196.8 508.6 188.6 502.6 182.6zM336 128h-160V80h160V128zM384 368c0 8.875-7.125 16-16 16h-32c-8.875 0-16-7.125-16-16v-32H192v32C192 376.9 184.9 384 176 384h-32C135.1 384 128 376.9 128 368v-32H0V448c0 17.62 14.38 32 32 32h448c17.62 0 32-14.38 32-32v-112h-128V368z"></path>
+                        </svg></div>
+                    <div class="sidebar-brand-text mx-3"><span>Fivetoolbox</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link active" href="/"><i class="fas fa-home"></i><span>Home</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/clean"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em" height="1em" fill="currentColor">
+                                <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                                <path d="M224 256c-35.2 0-64 28.8-64 64c0 35.2 28.8 64 64 64c35.2 0 64-28.8 64-64C288 284.8 259.2 256 224 256zM433.1 129.1l-83.9-83.9C341.1 37.06 328.8 32 316.1 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h320c35.35 0 64-28.65 64-64V163.9C448 151.2 442.9 138.9 433.1 129.1zM128 80h144V160H128V80zM400 416c0 8.836-7.164 16-16 16H64c-8.836 0-16-7.164-16-16V96c0-8.838 7.164-16 16-16h16v104c0 13.25 10.75 24 24 24h192C309.3 208 320 197.3 320 184V83.88l78.25 78.25C399.4 163.2 400 164.8 400 166.3V416z"></path>
+                            </svg><span>&nbsp;Clean</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/settings"><i class="fas fa-cog" style="font-size: 14px;"></i><span>Settings</span></a></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item"></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
             </div>
-            <div class="d-none d-md-block"><a class="btn btn-primary" role="button" href="/settings" style="background: rgb(40,40,40);border-color: rgba(0,0,0,0);">Settings</a></div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper" style="background: rgb(30,30,30);">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top" style="background: rgb(30,30,30)!important;">
+                    <div class="container-fluid">
+                        <ul class="navbar-nav flex-nowrap ms-auto"></ul>
+                    </div>
+                </nav>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="text-dark mb-0" style="color: rgb(255,255,255)!important;">Welcome to FiveToolbox</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="d-sm-flex justify-content-between align-items-center mb-4"></div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="alert alert-dark" role="alert"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor">
+                                    <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                                    <path d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM232 152C232 138.8 242.8 128 256 128s24 10.75 24 24v128c0 13.25-10.75 24-24 24S232 293.3 232 280V152zM256 400c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 385.9 273.4 400 256 400z"></path>
+                                </svg><span><strong>&nbsp;WIP Design. </strong>This design is still in development. Anything could be subject to change</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 style="color: rgb(255,255,255);margin-top: 9px;">Thank you for using FiveToolbox. If you are developer you can contribute to the project by sending a pull request.</h4>
+                            <h3 style="color: rgb(255,255,255);margin-top: 31px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-96 0 512 512" width="1em" height="1em" fill="currentColor">
+                                    <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                                    <path d="M204.3 32.01H96c-52.94 0-96 43.06-96 96c0 17.67 14.31 31.1 32 31.1s32-14.32 32-31.1c0-17.64 14.34-32 32-32h108.3C232.8 96.01 256 119.2 256 147.8c0 19.72-10.97 37.47-30.5 47.33L127.8 252.4C117.1 258.2 112 268.7 112 280v40c0 17.67 14.31 31.99 32 31.99s32-14.32 32-31.99V298.3L256 251.3c39.47-19.75 64-59.42 64-103.5C320 83.95 268.1 32.01 204.3 32.01zM144 400c-22.09 0-40 17.91-40 40s17.91 39.1 40 39.1s40-17.9 40-39.1S166.1 400 144 400z"></path>
+                                </svg>&nbsp;What do you want to do?</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12"><a class="btn btn-success btn-icon-split" role="button" style="background: rgb(50,50,50);border-color: rgb(50,50,50);margin: 5px;" href="/clean"><span class="text-white-50 icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em" height="1em" fill="currentColor">
+                                        <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                                        <path d="M224 256c-35.2 0-64 28.8-64 64c0 35.2 28.8 64 64 64c35.2 0 64-28.8 64-64C288 284.8 259.2 256 224 256zM433.1 129.1l-83.9-83.9C341.1 37.06 328.8 32 316.1 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h320c35.35 0 64-28.65 64-64V163.9C448 151.2 442.9 138.9 433.1 129.1zM128 80h144V160H128V80zM400 416c0 8.836-7.164 16-16 16H64c-8.836 0-16-7.164-16-16V96c0-8.838 7.164-16 16-16h16v104c0 13.25 10.75 24 24 24h192C309.3 208 320 197.3 320 184V83.88l78.25 78.25C399.4 163.2 400 164.8 400 166.3V416z"></path>
+                                    </svg></span><span class="text-white text">Clean Cache</span></a><a class="btn btn-success btn-icon-split" role="button" style="background: rgb(50,50,50);border-color: rgb(50,50,50);margin: 5px;" href="/settings"><span class="text-white-50 icon"><i class="fas fa-cog"></i></span><span class="text-white text">Open Settings</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <footer class="bg-white sticky-footer" style="background-color: rgb(30,30,30)!important;">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span style="color: rgb(255,255,255);">Version <%= version %> Your FiveM location:&nbsp; <%= fivet_config %> </span></div>
+                </div>
+            </footer>
         </div>
-    </nav>
-    <div style="height: auto;background: linear-gradient(-96deg, #3eadcf 0%, #abe9cd 100%), #ffffff;border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;border-bottom-left-radius: 5px;">
-        <h1 style="color: rgb(255,255,255);font-family: Poppins, sans-serif;font-size: 28px;margin-top: 11px;text-align: center;height: 34.5938px;">Make sure to set your fivem location first in the settings</h1>
     </div>
-    <div style="height: 80px;"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card" style="background: rgb(40,40,40);border-radius: 6px;">
-                    <div class="card-body">
-                        <h4 class="card-title" style="text-align: center;color: rgb(255,255,255);">Cache deleter</h4>
-                        <h6 class="card-title" style="text-align: center;color: rgb(119,119,119);">Clears all cache</h6>
-                        <div class="text-center"><a class="btn btn-primary" role="button" style="width: 100%;background: rgb(50,50,50);border-color: rgb(50,50,50);" href="/cachedel">Start</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card" style="background: rgb(40,40,40);border-radius: 6px;">
-                    <div class="card-body">
-                        <h4 class="card-title" style="text-align: center;color: rgb(255,255,255);">Clear Logs</h4>
-                        <h6 class="card-title" style="text-align: center;color: rgb(119,119,119);">Clears all logs</h6>
-                        <div class="text-center"><a class="btn btn-primary" role="button" style="width: 100%;background: rgb(50,50,50);border-color: rgb(50,50,50);" href="/logsdel">Start</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card" style="background: rgb(40,40,40);border-radius: 6px;"></div>
-                <div class="card" style="background: rgb(40,40,40);border-radius: 6px;">
-                    <div class="card-body">
-                        <h4 class="card-title" style="text-align: center;color: rgb(255,255,255);">Clear Crashes</h4>
-                        <h6 class="card-title" style="text-align: center;color: rgb(119,119,119);">Clears the /crashes folder</h6>
-                        <div class="text-center"><a class="btn btn-primary" role="button" style="width: 100%;background: rgb(50,50,50);border-color: rgb(50,50,50);" href="/crashesdel">Start</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <nav class="navbar navbar-light navbar-expand fixed-bottom py-3" style="background: rgb(20,20,20);">
-        <div class="container"><a class="btn btn-primary disabled" role="button" href="#" style="background: rgb(40,40,40);border-color: rgba(0,0,0,0);margin-right: 10px;margin-left: 10px;width: 10%;height: 63px;" disabled>Version: <%= version %></a><a class="btn btn-primary disabled" role="button" href="#" style="background: rgb(40,40,40);border-color: rgba(0,0,0,0);margin-right: 10px;margin-left: 10px;width: 90%;height: 63px;font-size: 23px;" disabled>Your fivem location: <%= fivet_config %></a></div>
-    </nav>
-    </nav>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script>
+        if (window.location.search === '?saved=true') {
+            Toastify({
+              text: "Settings saved",
+              duration: 5000,
+              destination: "#",
+              newWindow: false,
+              close: true,
+              gravity: "bottom", // `top` or `bottom`
+              position: "right", // `left`, `center` or `right`
+              stopOnFocus: true, // Prevents dismissing of toast on hover
+              style: {
+                background: "rgb(50,50,50)",
+              },
+              onClick: function(){} // Callback after click
+            }).showToast();
+        }
+        if (window.location.search === '?cleaned=true') {
+            Toastify({
+              text: "Cache Cleaned",
+              duration: 5000,
+              destination: "#",
+              newWindow: false,
+              close: true,
+              gravity: "bottom", // `top` or `bottom`
+              position: "right", // `left`, `center` or `right`
+              stopOnFocus: true, // Prevents dismissing of toast on hover
+              style: {
+                background: "rgb(50,50,50)",
+              },
+              onClick: function(){} // Callback after click
+            }).showToast();
+        }
+        if (window.location.search === '?cleanedlogs=true') {
+            Toastify({
+              text: "Logs cleaned",
+              duration: 5000,
+              destination: "#",
+              newWindow: false,
+              close: true,
+              gravity: "bottom", // `top` or `bottom`
+              position: "right", // `left`, `center` or `right`
+              stopOnFocus: true, // Prevents dismissing of toast on hover
+              style: {
+                background: "rgb(50,50,50)",
+              },
+              onClick: function(){} // Callback after click
+            }).showToast();
+        }
+        if (window.location.search === '?cleanedcrashes=true') {
+            Toastify({
+              text: "Crashes saved",
+              duration: 5000,
+              destination: "#",
+              newWindow: false,
+              close: true,
+              gravity: "bottom", // `top` or `bottom`
+              position: "right", // `left`, `center` or `right`
+              stopOnFocus: true, // Prevents dismissing of toast on hover
+              style: {
+                background: "rgb(50,50,50)",
+              },
+              onClick: function(){} // Callback after click
+            }).showToast();
+        }
+
+    </script>
 </body>
 
 </html>

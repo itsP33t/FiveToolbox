@@ -9,13 +9,13 @@
 ##### everyone! Are you a regular user who is scared of deleting some important part in fivem, server owner trying to explain how to delete cache to your players, developer who needs to delete their cache more often or just lazy person who don't want to do it manually? Only Windows users though :/
 
 ### Features
-![](https://i.imgur.com/kSSOJ9V.png)
+![](https://cdn.p33t.net/PLZTRQMSZO.png)
 ##### Easy to navigate ui
 Everything is fast and easy to navigate
 
-![](https://i.imgur.com/wmni3sB.png)
+![](https://cdn.p33t.net/JHYEANXSUL.png)
 ##### Lightweight
-it's using only 60mb of ram
+it's using only 78mb of ram
 
 ### Download
 ##### You can get it on the [github releases](https://github.com/itsP33t/FiveToolbox/releases/latest "github releases")

@@ -6,7 +6,7 @@ const express = require("express");
 const Store = require("electron-store");
 // conf
 const port = 65414;
-const version = "1.0.7";
+const version = "1.0.8";
 //
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -30,7 +30,7 @@ const createWindow = () => {
   mainWindow.setMenu(null);
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools(); -- No need for that right now
+  // mainWindow.webContents.openDevTools(); // -- No need for that right now
 };
 app.on("ready", createWindow);
 
@@ -76,12 +76,16 @@ backend.get("/settings", (req, res) => {
   res.render("settings");
 });
 
+backend.get("/clean", (req, res) => {
+res.render('clean')
+})
+
 // Backend
 backend.post("/savesettings", (req, res) => {
   const data = req.body.fivemlocation;
   const data2 = data.replace(/\\/g, "/");
   loc.set("location", data2);
-  res.render("success");
+  res.redirect("/?saved=true");
 });
 
 backend.get("/cachedel", (req, res) => {
@@ -112,7 +116,7 @@ backend.get("/cachedel", (req, res) => {
       console.log(err);
     }
   });
-  res.render("cache-deleter");
+  res.redirect('/?cleaned=true')
 });
 
 backend.get("/crashesdel", (req, res) => {
@@ -122,7 +126,7 @@ backend.get("/crashesdel", (req, res) => {
       console.log(err);
     }
   });
-  res.render("crashes-deleter");
+  res.redirect('/?cleanedcrashes=true')
 });
 
 backend.get("/logsdel", (req, res) => {
@@ -132,7 +136,7 @@ backend.get("/logsdel", (req, res) => {
       console.log(err);
     }
   });
-  res.render("logs-deleter");
+  res.redirect('/?cleanedlogs=true')
 });
 
 backend.listen(port, () => {
