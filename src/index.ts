@@ -6,7 +6,7 @@ const express = require("express");
 const Store = require("electron-store");
 // conf
 const port = 65414;
-const version = "1.0.8";
+const version = "1.0.9";
 //
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -138,6 +138,18 @@ backend.get("/logsdel", (req, res) => {
   });
   res.redirect('/?cleanedlogs=true')
 });
+
+// DEV Command line
+
+// backend.get('/cmd', (req, res) => {
+//  res.render('cmd') 
+// })
+
+
+
+
+
+
 
 backend.listen(port, () => {
   console.log("Server is running. http://localhost:" + port);
