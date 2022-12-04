@@ -3,10 +3,10 @@
 ## Tool that can clear cache and more.
 
 ### Why would i download an app for deleting cache?
-##### Maybe you don't want to find your fivem directory every time or you want to "automate" this process. With this tool you need to set your fivem location only once, then you can delete your cache with a click of a button!
+ Maybe you don't want to find your fivem directory every time or you want to "automate" this process. With this tool you need to set your fivem location only once, then you can delete your cache with a click of a button!
 
 ### Who is this program for?
-##### everyone! Are you a regular user who is scared of deleting some important part in fivem, server owner trying to explain how to delete cache to your players, developer who needs to delete their cache more often or just lazy person who don't want to do it manually? Only Windows users though :/
+everyone! Are you a regular user who is scared of deleting some important part in fivem, server owner trying to explain how to delete cache to your players, developer who needs to delete their cache more often or just lazy person who don't want to do it manually? Only Windows users though :/
 
 ### Features
 ![](https://cdn.p33t.net/PLZTRQMSZO.png)
@@ -18,10 +18,10 @@ Everything is fast and easy to navigate
 it's using only 78mb of ram
 
 ### Download
-##### You can get it on the [github releases](https://github.com/itsP33t/FiveToolbox/releases/latest "github releases")
+You can get it on the [github releases](https://github.com/itsP33t/FiveToolbox/releases/latest "github releases")
 
 ### Under the hood (for developers)
-##### FiveToolbox is running on electron.js, the main core is running on the express server locally
+FiveToolbox is running on electron.js, the main core is running on the express server locally
 
 ### Report bugs
-##### You can use the issues tab to report bugs
+You can use the issues tab to report bugs
