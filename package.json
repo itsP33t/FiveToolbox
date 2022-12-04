@@ -2,7 +2,7 @@
   "name": "fivetoolbox",
   "productName": "fivetoolbox",
   "description": "Toolbox software for fivem",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "main": "src/index.ts",
   "repository": {
     "type": "git",

@@ -6,7 +6,7 @@ const express = require("express");
 const Store = require("electron-store");
 // conf
 const port = 65414;
-const version = "1.0.9";
+const version = "1.1.0-LEGACY";
 //
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
